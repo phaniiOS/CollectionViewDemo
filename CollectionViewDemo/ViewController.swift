@@ -8,7 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+//    var num = 10
+    var img: [UIImage] = [(UIImage(named: "One") as UIImage?)!,
+                          (UIImage(named: "Two") as UIImage?)!,
+                          (UIImage(named: "Three") as UIImage?)!,
+                          (UIImage(named: "Four") as UIImage?)!,
+                          (UIImage(named: "Five") as UIImage?)!,
+                          (UIImage(named: "Six") as UIImage?)!,
+                          (UIImage(named: "Seven") as UIImage?)!,
+                          (UIImage(named: "Eight") as UIImage?)!,
+                          (UIImage(named: "Nine") as UIImage?)!,
+                          (UIImage(named: "Ten") as UIImage?)!]
+    
+    @IBOutlet weak var ImageViewOutlet: UIImageView!
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return img.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! CollectionViewCell
+        cell.CellImageView.image = img[indexPath.row % img.count]
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        ImageViewOutlet.image = img[indexPath.row]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,6 +14,7 @@
 		49325DD622176A08006CD2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49325DD422176A08006CD2E9 /* LaunchScreen.storyboard */; };
 		49325DE122176A08006CD2E9 /* CollectionViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49325DE022176A08006CD2E9 /* CollectionViewDemoTests.swift */; };
 		49325DEC22176A08006CD2E9 /* CollectionViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49325DEB22176A08006CD2E9 /* CollectionViewDemoUITests.swift */; };
+		49325DFA22176F6B006CD2E9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49325DF922176F6B006CD2E9 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		49325DE722176A08006CD2E9 /* CollectionViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49325DEB22176A08006CD2E9 /* CollectionViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDemoUITests.swift; sourceTree = "<group>"; };
 		49325DED22176A08006CD2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49325DF922176F6B006CD2E9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				49325DCB22176A05006CD2E9 /* AppDelegate.swift */,
 				49325DCD22176A05006CD2E9 /* ViewController.swift */,
+				49325DF922176F6B006CD2E9 /* CollectionViewCell.swift */,
 				49325DCF22176A05006CD2E9 /* Main.storyboard */,
 				49325DD222176A08006CD2E9 /* Assets.xcassets */,
 				49325DD422176A08006CD2E9 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				49325DCE22176A05006CD2E9 /* ViewController.swift in Sources */,
 				49325DCC22176A05006CD2E9 /* AppDelegate.swift in Sources */,
+				49325DFA22176F6B006CD2E9 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
