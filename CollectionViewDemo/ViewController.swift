@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-//    var num = 10
+    var TotalCells = 10
     var img: [UIImage] = [(UIImage(named: "One") as UIImage?)!,
                           (UIImage(named: "Two") as UIImage?)!,
                           (UIImage(named: "Three") as UIImage?)!,
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var ImageViewOutlet: UIImageView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return img.count
+        return TotalCells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -33,8 +33,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        ImageViewOutlet.image = img[indexPath.row]
+        ImageViewOutlet.image = img[indexPath.row % img.count]
     }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == TotalCells - 1 {
+            let insertIndexPath = IndexPath(item: TotalCells, section: 0)
+            TotalCells += 1
+            collectionView.insertItems(at: [insertIndexPath])
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
